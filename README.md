@@ -42,3 +42,34 @@ sudo systemctl status inetutils-inetd
 sudo apt update
 sudo apt install net-tools
 ifconfig
+
+
+============================== install Node ====================================================
+1. Installing Node.js with Apt from the Default Repositories
+sudo apt update
+sudo apt install nodejs
+node -v
+sudo apt install npm
+
+2. Installing Node.js with Apt Using a NodeSource 
+cd ~
+curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh
+nano /tmp/nodesource_setup.sh
+sudo bash /tmp/nodesource_setup.sh
+sudo apt install nodejs
+node -v
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
