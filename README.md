@@ -38,7 +38,7 @@ sudo systemctl enable inetutils-inetd
 sudo systemctl status inetutils-inetd
 
 
-==================================================================================
+================================== ifconfig ================================================
 sudo apt update
 sudo apt install net-tools
 ifconfig
@@ -59,6 +59,10 @@ sudo bash /tmp/nodesource_setup.sh
 sudo apt install nodejs
 node -v
 
+============================== firewall ====================================================
+sudo apt update
+sudo apt install gufw
+search gufw And Open
 
 
 
