@@ -37,3 +37,8 @@ sudo systemctl start inetutils-inetd
 sudo systemctl enable inetutils-inetd
 sudo systemctl status inetutils-inetd
 
+
+==================================================================================
+sudo apt update
+sudo apt install net-tools
+ifconfig
