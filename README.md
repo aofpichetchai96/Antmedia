@@ -20,12 +20,12 @@ wget https://raw.githubusercontent.com/ant-media/Scripts/master/install_ant-medi
 
 ================================= telnetd Setting =================================================
 sudo apt show telnetd
-sudo apt install telnetd -Y
+sudo apt install telnetd
 sudo systemctl status inetd
 sudo systemctl start inetd
 ** หากไม่ active **
-sodo nano /etc/inetd.conf
-เพิ่ม
+sudo nano /etc/inetd.conf
+** เพิ่ม **
 telnet stream tcp nowait root /usr/sbin/in.telnetd in.telnetd
 sudo systemctl start inetutils-inetd
 sudo systemctl enable inetutils-inetd
