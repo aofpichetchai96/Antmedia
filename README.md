@@ -80,6 +80,10 @@ sudo apt install code
 sudo snap install --classic code
 code --version
 
+** Install Extension **
+-Material Icon Theme
+-Live Server
+
 
 
 
