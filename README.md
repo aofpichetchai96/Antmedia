@@ -1,4 +1,5 @@
-# Antmedia
+# Ubuntu Desktop
+# Antmedia 
 
 ***** Uninstall Ant Media *****
 #หยุดการทำงานของ Ant Media Server
@@ -64,6 +65,20 @@ sudo apt update
 sudo apt install gufw
 search gufw And Open
 
+============================== install VScode ====================================================
+1. How to install VS Code with apt (Hard)
+sudo apt update
+sudo apt-get install wget gpg
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+rm -f packages.microsoft.gpg
+sudo apt install apt-transport-https -y
+sudo apt install code
+
+2.How to install VS Code as a snap package
+sudo snap install --classic code
+code --version
 
 
 
