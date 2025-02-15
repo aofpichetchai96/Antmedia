@@ -24,7 +24,7 @@ export FLASK_APP=superset
 	sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1
 	sudo update-alternatives --config python3
 	python3 --version
-	python3 -m venv superset-env
+	sudo python3 -m venv superset-env
  	source superset-env/bin/activate
 	pip3 install apache-superset
 	export FLASK_APP=superset
