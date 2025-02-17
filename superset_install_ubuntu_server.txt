@@ -79,3 +79,21 @@ sudo systemctl enable superset.service
 sudo systemctl start superset.service
 sudo systemctl status superset.service
 
+
+
+**********************  Windows ********************** 
+netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=8088 connectaddress=<WSL_IP> connectport=8088
+ip addr show eth0
+netsh advfirewall firewall add rule name="WSL Superset" dir=in action=allow protocol=TCP localport=8088
+
+=========================== add to file run_superset.sh ===========================
+#!/bin/bash
+export SUPERSET_CONFIG_PATH=/home/aofferman/superset_config.py
+. /home/aofferman/superset-env/bin/activate
+gunicorn \
+      -w 10 \
+      --timeout 120 \
+      -b 0.0.0.0:8088 \
+      --limit-request-line 0 \
+      --limit-request-field_size 0 \
+      "superset.app:create_app()"
