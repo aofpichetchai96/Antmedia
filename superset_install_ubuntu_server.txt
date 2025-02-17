@@ -29,7 +29,7 @@ export FLASK_APP=superset
 	pip3 install apache-superset
 	export FLASK_APP=superset
 	openssl rand -base64 42
-	nano superset_config.py  ######[SECRET_KEY='V/xtLozuiqqPpUkzxwn6Cr+KSrA6Lb+Rcs+E8DR/iqRrIjIIaU3UaZ6H']
+	nano superset_config.py  ######[SECRET_KEY='V/xtLozuiqqPpUkzxwn6Cr+KSrA6Lb+Rcs+E8DR/iqRrIjIIaU3UaZ6H' /PUBLIC_ROLE_LIKE = "Gamma"]
 	export SUPERSET_CONFIG_PATH=~/superset_config.py
 	superset db upgrade
 	superset fab create-admin
