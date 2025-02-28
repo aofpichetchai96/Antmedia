@@ -1,20 +1,20 @@
 *** PM2 Windows Installation ***
-npm install --global --production windows-build-tools
-npm install -g pm2 pm2-windows-startup
-pm2-startup install
-pm2 start src/index.js --name nodejs-demo
-pm2 save
+npm cache clean --force
+npm install -g pm2
+pm2 -v
+pm2 start app.js
 pm2 list
-** Restart Win Windows and pm2 status process run **
+pm2 save
 
-** Check pm2-windows-start install success or not **
-pm2-windows-startup -h 
+pm2 startup
 
-** uninstall pm2-windows-start and new install **
-pm2-windows-startup uninstall 
-npm uninstall -g pm2-windows-startup
-npm install -g pm2-windows-startup
-pm2-windows-startup install
+npm i -g pm2-windows-startup
+npm i -g pm2-windows-service
+npm i -g npm-check-updates
+pm2 list
+pm2 save
+pm2-startup install
+
 
 *** PM2 Installation Linux ***
 npm install -g pm2
