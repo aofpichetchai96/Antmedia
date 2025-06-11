@@ -1,1 +1,22 @@
-https://www.configserverfirewall.com/docker/docker-windows-server-2022/
+## https://www.configserverfirewall.com/docker/docker-windows-server-2022/
+
+## Power shell Administrator
+Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/microsoft/Windows-Containers/Main/helpful_tools/Install-DockerCE/install-docker-ce.ps1" -o install-docker-ce.ps1
+
+.\install-docker-ce.ps1
+
+## During the installation, if you encounter errors like "Failed to start service 'Docker Engine (docker)'" or "errors during connect", terminate the installation process by pressing CTRL+C and then run the installation script again.
+
+## Docker installation requires a restart, so your Windows Server will automatically reboot in a few moments. Once the server is back up, it will finish the installation and show the message that Docker is installed.
+## To confirm that Docker Engine is installed, run the docker version command:
+docker version
+---------
+Server: Docker Engine - Community
+ Engine:
+  Version:          26.1.4
+  API version:      1.45 (minimum version 1.24)
+  Go version:       go1.21.11
+  Git commit:       de5c9cf
+  Built:            Wed Jun  5 11:28:43 2024
+  OS/Arch:          windows/amd64
+  Experimental:     false
